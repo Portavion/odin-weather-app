@@ -1,4 +1,10 @@
 import "./styles.css";
-import { greeting } from "./greeting.js";
+import { fetchWeather, weatherDataProcessor } from "./weather.js";
 
-console.log(greeting);
+const weatherJSON = await fetchWeather("london");
+console.log(weatherJSON);
+
+let weatherData = new weatherDataProcessor(weatherJSON);
+
+console.log("Processed data");
+console.log(weatherData);
