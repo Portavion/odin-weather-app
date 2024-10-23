@@ -20,5 +20,5 @@ body {
 }
 
 .conditions-gif {
-	width: 45vw;
+	max-width: 45vw;
 }
